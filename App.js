@@ -471,7 +471,6 @@ const styles = StyleSheet.create({
   search: {
     flex: 1,
     backgroundColor: '#ffffff',
-    width: '100vw',
     alignItems: 'center',
     JustifyContent: 'center',
   },

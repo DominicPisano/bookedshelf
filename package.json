@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d web-build",
     "predeploy": "expo build:web"
   },
-  "homepage": "https://www.dominicpisano.com/bookedshelf",
+  "homepage": "https://bookedshelf.dominicpisano.com",
   "dependencies": {
     "@expo/metro-config": "^0.4.0",
     "@expo/webpack-config": "^0.17.0",
@@ -23,7 +23,6 @@
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-icons": "^4.6.0",
     "react-native": "0.69.6",
     "react-native-safe-area-context": "4.3.1",
     "react-native-screens": "~3.15.0",

@@ -31,6 +31,7 @@ const HomeScreen = () => {
 const deleteBook = (index) => {
   library.splice(index, 1);
   localStorage.setItem("library", JSON.stringify(library));
+  
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(<App/>);
 }

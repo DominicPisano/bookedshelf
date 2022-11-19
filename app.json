@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "bookedshelf",
+    "name": "BookedShelf",
     "icon": "./src/BookedShelfFavicon.png",
     "slug": "bookedshelf",
     "version": "1.0.0",
@@ -8,5 +8,5 @@
       "**/*"
     ]
   },
-  "name": "bookedshelf"
+  "name": "BookedShelf"
 }

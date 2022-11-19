@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "BookedShelf",
-    "icon": "./src/favicon.ico",
+    "icon": "./src/BookedShelfFavicon.png",
     "slug": "BookedShelf",
     "version": "1.0.0",
     "assetBundlePatterns": [

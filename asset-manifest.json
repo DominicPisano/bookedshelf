@@ -1,0 +1,33 @@
+{
+  "files": {
+    "app.js": "/bookedshelf/static/js/app.55430a9b.chunk.js",
+    "app.js.map": "/bookedshelf/static/js/app.55430a9b.chunk.js.map",
+    "runtime~app.js": "/bookedshelf/static/js/runtime~app.a58b6e71.js",
+    "runtime~app.js.map": "/bookedshelf/static/js/runtime~app.a58b6e71.js.map",
+    "static/js/2.c0788baf.chunk.js": "/bookedshelf/static/js/2.c0788baf.chunk.js",
+    "static/js/2.c0788baf.chunk.js.map": "/bookedshelf/static/js/2.c0788baf.chunk.js.map",
+    "fonts/AntDesign.ttf": "/bookedshelf/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/bookedshelf/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/bookedshelf/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/bookedshelf/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/bookedshelf/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/bookedshelf/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/bookedshelf/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/bookedshelf/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/bookedshelf/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/bookedshelf/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/bookedshelf/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/bookedshelf/./fonts/SimpleLineIcons.ttf",
+    "index.html": "/bookedshelf/index.html",
+    "manifest.json": "/bookedshelf/manifest.json",
+    "serve.json": "/bookedshelf/serve.json",
+    "static/js/2.c0788baf.chunk.js.LICENSE.txt": "/bookedshelf/static/js/2.c0788baf.chunk.js.LICENSE.txt",
+    "static/media/star-outline.png": "/bookedshelf/static/media/star-outline.15dbcbbe.png",
+    "static/media/star.png": "/bookedshelf/static/media/star.6787e6dd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.a58b6e71.js",
+    "static/js/2.c0788baf.chunk.js",
+    "static/js/app.55430a9b.chunk.js"
+  ]
+}

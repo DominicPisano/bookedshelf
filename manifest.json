@@ -1,0 +1,7 @@
+{
+  "display": "standalone",
+  "lang": "en",
+  "name": "Bookedshelf",
+  "short_name": "Bookedshelf",
+  "start_url": "/?utm_source=web_app_manifest"
+}

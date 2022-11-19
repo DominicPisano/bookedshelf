@@ -99,8 +99,8 @@ const updateBook = (index) => {
   const genre = library[index].genre;
   const rating = document.getElementById("ratingInput").value
   const length = library[index].length;
+  
   library[index] = {id, title, author, genre, rating, length}
-
   localStorage.setItem("library", JSON.stringify(library));
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(<App/>);

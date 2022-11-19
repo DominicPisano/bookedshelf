@@ -91,7 +91,7 @@ const EditBook = ({index}) => {
   );
 }
 
-//update book in library and update local storage
+//update the book in library and update local storage
 const updateBook = (index) => {
   const id = library[index].id;
   const title = document.getElementById("titleInput").value

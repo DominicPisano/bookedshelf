@@ -317,7 +317,6 @@ const getTopGenre = () => {
     topGenre[topGenre.length - 1] = "and " + topGenre[topGenre.length - 1];
   }
   return topGenre.join(", ");
-
 }
 
 //gets the top length from the library and displays it

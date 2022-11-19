@@ -27,7 +27,16 @@
     "react-native-web": "~0.18.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "gh-pages": "^4.0.0"
   },
   "private": true
+
+  {
+    "homepage": "https://www.dominicpisano.com/bookedshelf/",
+    "scripts": {
+        "deploy": "gh-pages -d web-build",
+        "predeploy": "expo build:web"
+    }
+}
 }

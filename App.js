@@ -27,7 +27,7 @@ const HomeScreen = () => {
   );
 }
 
-//delete book from library and update local storage
+//Delete book from library and update local storage
 const deleteBook = (index) => {
   library.splice(index, 1);
   localStorage.setItem("library", JSON.stringify(library));

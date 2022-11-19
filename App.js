@@ -456,7 +456,6 @@ const styles = StyleSheet.create({
     border: '1px solid black',
     borderRadius: '10px',
     justifyContent: 'space-between',
-    width: '255px',
   },
   buttons: {
     flexDirection: 'row',
@@ -479,7 +478,6 @@ const styles = StyleSheet.create({
   searchbar: {
     display: 'flex',
     flexDirection: 'row',
-    width: '100vw',
     justifyContent: 'center',
   },
   input: {

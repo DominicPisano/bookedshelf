@@ -2,7 +2,7 @@
   "expo": {
     "name": "BookedShelf",
     "icon": "./src/BookedShelfFavicon.png",
-    "slug": "bookedshelf",
+    "slug": "BookedShelf",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

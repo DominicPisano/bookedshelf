@@ -402,7 +402,7 @@ function App () {
               }
             },
             tabBarInactiveTintColor: 'black',
-            tabBarActiveTintColor: 'indigo',
+            tabBarActiveTintColor: '#07BEB8',
           })}
         >
           <Tab.Screen name="Library" component={HomeScreen}/>
@@ -467,7 +467,7 @@ const styles = StyleSheet.create({
     marginBottom : '5px',
   },
   button: {
-    backgroundColor: 'indigo',
+    backgroundColor: '#07BEB8',
     padding: '5px',
     borderRadius: '5px',
     margin: '5px',

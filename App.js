@@ -346,24 +346,20 @@ const getTotalPages = () => {
 const StatsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.stats}>Stats</Text>
-      <View >
-        <Text style={styles.stats}><Ionicons name="person" size="20px"/> Most Read Author</Text>
-        <Text style={styles.text}>{getTopAuthor()}</Text>
-        <br></br>
-        <Text style={styles.stats}><Ionicons name="heart" size="20px"/> Most Read Genre</Text>
-        <Text style={styles.text}>{getTopGenre()}</Text>
-        <br></br>
-        <Text style={styles.stats}><Ionicons name="book" size="20px"/> Longest Book</Text>
-        <Text style={styles.text}>{getLongest()}</Text>
-        <br></br>
-        <Text style={styles.stats}><Ionicons name="reader" size="20px"/> Total Pages Read</Text>
-        <Text style={styles.text}>{getTotalPages()}</Text>
-      </View>
+      <Text style={styles.stats}><Ionicons name="person" size="20px"/> Most Read Author</Text>
+      <Text style={styles.text}>{getTopAuthor()}</Text>
+      <br></br>
+      <Text style={styles.stats}><Ionicons name="heart" size="20px"/> Most Read Genre</Text>
+      <Text style={styles.text}>{getTopGenre()}</Text>
+      <br></br>
+      <Text style={styles.stats}><Ionicons name="book" size="20px"/> Longest Book</Text>
+      <Text style={styles.text}>{getLongest()}</Text>
+      <br></br>
+      <Text style={styles.stats}><Ionicons name="reader" size="20px"/> Total Pages Read</Text>
+      <Text style={styles.text}>{getTotalPages()}</Text>
     </View>
   );
 }
-
 
 //Navigation Screen displays the navigation bar at the bottom of the screen and allows the user to navigate between the different screens of the app
 let lastUsedScreen = "Library";
@@ -458,6 +454,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: '10px',
     border: '1px solid black',
+    borderRadius: '10px',
     justifyContent: 'space-between',
     width: '255px',
   },

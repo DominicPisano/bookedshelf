@@ -8,14 +8,7 @@ import ReactDOM from 'react-dom';
 import star from './src/star.png';
 import staroutline from './src/star-outline.png';
 
-const HomeScreen = () => {
-  return (
-    <View style={styles.container}>
-      <BookList/>
-    </View>
-  );
-}
-
+//Initialise library from local storage if it exists or create a new one
 let library = []
 const init = () => {
   let data = localStorage.getItem('library');
@@ -25,6 +18,16 @@ const init = () => {
 }
 init();
 
+//Home Screen screen that displays the library
+const HomeScreen = () => {
+  return (
+    <View style={styles.container}>
+      <BookList/>
+    </View>
+  );
+}
+
+//delete book from library and update local storage
 const deleteBook = (index) => {
   library.splice(index, 1);
   localStorage.setItem("library", JSON.stringify(library));
@@ -32,11 +35,13 @@ const deleteBook = (index) => {
   root.render(<App/>);
 }
 
+//display the edit book screen
 const showEdit = (index) => {
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(<EditBook index={index}/>);
 }
 
+//Edit Book Screen that displays the book and allows the user to edit the rating
 const EditBook = ({index}) => {
   //Ratings bar
   const [defaultRating, setDefaultRating] = useState(library[index].rating);
@@ -86,6 +91,7 @@ const EditBook = ({index}) => {
   );
 }
 
+//update book in library and update local storage
 const updateBook = (index) => {
   const id = library[index].id;
   const title = document.getElementById("titleInput").value
@@ -100,8 +106,8 @@ const updateBook = (index) => {
   root.render(<App/>);
 }
 
+//BookList component that displays the library
 const BookList = () => {
-  
   //Seperate the authors and show if there is an undefined author
   const Authors = (authors) => {
     if (authors == undefined)
@@ -169,7 +175,7 @@ const addBook = (id, title, author, genre, rating, length) => {
   root.render(<App/>);
 }
 
-//Search for a book
+//Add Screen that displays the search results and allows the user to add a book to the library from the search results
 const AddScreen = () => {
   //Star Ratings
   const [defaultRating, setDefaultRating] = useState(1);
@@ -243,16 +249,18 @@ const AddScreen = () => {
                   <TouchableOpacity onPress={() => addBook(book.id, book.volumeInfo.title, book.volumeInfo.authors, book.volumeInfo.categories, 0, book.volumeInfo.pageCount)}>
                     <Ionicons style={styles.button} name="add" size="30px" color={"white"}/>
                   </TouchableOpacity>
+
                 </View> 
               ) 
             }
-            )}
-          </View>
-        </ScrollView>
+          )}
+        </View>
+      </ScrollView>
     </View>
   );
 }
 
+//gets the top authors from the library and displays them
 const getTopAuthor = () => {
   let authors = [];
   let topAuthor = [];
@@ -282,6 +290,7 @@ const getTopAuthor = () => {
 
 }
 
+//gets the top genres from the library and displays them
 const getTopGenre = () => {
   let genres = [];
   let topGenre = [];
@@ -311,6 +320,7 @@ const getTopGenre = () => {
 
 }
 
+//gets the top length from the library and displays it
 const getLongest = () => {
   let longest = 0;
   let title = "";
@@ -323,6 +333,7 @@ const getLongest = () => {
   return title + " (" + longest + " pages)";
 }
 
+//gets the total number of pages in the library and displays it
 const getTotalPages = () => {
   let total = 0;
   for (let i = 0; i < library.length; i++) {
@@ -331,6 +342,7 @@ const getTotalPages = () => {
   return total;
 }
 
+//Stats Screen displays the stats of the library
 const StatsScreen = () => {
   return (
     <View style={styles.container}>
@@ -352,14 +364,16 @@ const StatsScreen = () => {
   );
 }
 
-//Navigation
+
+//Navigation Screen displays the navigation bar at the bottom of the screen and allows the user to navigate between the different screens of the app
+let lastUsedScreen = "Library";
 const Tab = createBottomTabNavigator();
 function App () {
   return (
     <View style={styles.main}>
       <NavigationContainer >
-        <Tab.Navigator  initialRouteName="Library"
-          screenOptions={({ route }) => ({
+        <Tab.Navigator initialRouteName={lastUsedScreen} screenListeners = {({ route }) => ({ focus: () => lastUsedScreen = route.name })}
+        screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
               if (route.name === 'Library') {
                 return (
@@ -391,7 +405,7 @@ function App () {
             tabBarActiveTintColor: 'indigo',
           })}
         >
-          <Tab.Screen  name="Library" component={HomeScreen}/>
+          <Tab.Screen name="Library" component={HomeScreen}/>
           <Tab.Screen name="Add Books" component={AddScreen}/>
           <Tab.Screen name="Statistics" component={StatsScreen}/>
         </Tab.Navigator>
@@ -400,7 +414,6 @@ function App () {
   );
 }
 export default App;
-
 
 const styles = StyleSheet.create({
   container: {
@@ -446,6 +459,7 @@ const styles = StyleSheet.create({
     margin: '10px',
     border: '1px solid black',
     justifyContent: 'space-between',
+    width: '255px',
   },
   buttons: {
     flexDirection: 'row',

@@ -65,8 +65,7 @@ const EditBook = ({index}) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text>Edit Book</Text>
+    <View style={styles.edit}>
       <View>
         <input style={styles.hide} type={"text"} id={"idInput"} defaultValue={library[index].id}></input>
         <Text>Title</Text>
@@ -86,7 +85,11 @@ const EditBook = ({index}) => {
         <View style={styles.hide}><input type="text" id="ratingInput" value={defaultRating}></input></View>
         <View style={styles.hide}><input type="text" id="lengthInput" value={library[index].length}></input></View>
         <br></br>
-        <Button title="Update" onPress={() => updateBook(index)}></Button>
+        <View style={styles.buttons}>
+          <TouchableOpacity onPress={() => updateBook(index)}>
+            <Ionicons style={styles.button} name="checkmark-outline" size="30px" color={"white"}/>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -420,6 +423,13 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     width: '100vw',    
   },
+  edit: {
+    justifyContent: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100vw',
+    textAlign: 'center',
+  },
   stats: {
     fontSize: 18,
     display: "flex",
@@ -459,6 +469,7 @@ const styles = StyleSheet.create({
   },
   buttons: {
     flexDirection: 'row',
+    justifyContent: 'center',
     marginTop: '5px',
     marginBottom : '5px',
   },
